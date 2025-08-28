@@ -1,7 +1,7 @@
 /* styles.css */
 :root { --max: 900px; }
 * { box-sizing: border-box; }
-body { font-family: system-ui, 'Times New Roman', Times, serif, sans-serif; margin: 0; line-height: 1.5; }
+body { font-family: 'Times New Roman', Times, serif, 'Times New Roman', Times, serif, sans-serif; margin: 0; line-height: 1.5; }
 header { padding: 2rem 1rem; background: #111; color: #fff; }
 main { max-width: var(--max); margin: 2rem auto; padding: 0 1rem; }
 h1, h2 { margin: 0 0 .5rem; }
