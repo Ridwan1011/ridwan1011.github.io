@@ -12,7 +12,7 @@ const CARS = [
     description:
       "Track-focused twin-turbo V8 with razor-sharp handling and iconic Ferrari drama.",
     image:
-      "https://images.unsplash.com/photo-1616179054043-4e0d9962b40b?q=80&w=1200&auto=format&fit=crop",
+      "https://i.redd.it/2019-ferrari-488-pista-v0-yh4uazoznnfb1.jpg?width=2160&format=pjpg&auto=webp&s=ec1f0b5efb8198fe2dd9093d8d94034accdce499",
   },
   {
     id: "lambo-aven",
@@ -24,7 +24,7 @@ const CARS = [
     description:
       "Howling V12 flagship—wild aero, outrageous presence, and raw theater.",
     image:
-      "https://images.unsplash.com/photo-1519340333755-5063a0f111f2?q=80&w=1200&auto=format&fit=crop",
+      "https://www.hdcarwallpapers.com/walls/2020_lamborghini_aventador_svj_roadster_4k_5k_4-HD.jpg",
   },
   {
     id: "porsche-gt3",
@@ -36,7 +36,7 @@ const CARS = [
     description:
       "Naturally aspirated flat-six perfection with a motorsport soul and sublime steering.",
     image:
-      "https://images.unsplash.com/photo-1606662614136-9b3a23e2bb82?q=80&w=1200&auto=format&fit=crop",
+      "https://www.pcarmarket.com/static/media/uploads/galleries/photos/uploads/galleries/14893-luis-2022-porsche-911-gt3-blue/.thumbnails/IMG_1074.jpg/IMG_1074-tiny-2048x0.jpg",
   },
   {
     id: "mercedes-amg-gt",
@@ -48,7 +48,7 @@ const CARS = [
     description:
       "Front-mid V8 brute with a playful tail and serious track credentials.",
     image:
-      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1200&auto=format&fit=crop",
+      "https://www.hiltonandmoss.com/image-blobs/stock/590945/images/7b05f02c-8276-4368-b2bf-e9758b44bf82/mercedes_benz_amg_gtc_hilton_and_moss_01.jpg?width=2000&height=1333&crop",
   },
   {
     id: "bmw-m3",
@@ -60,7 +60,7 @@ const CARS = [
     description:
       "Everyday usable super-sedan with brutal acceleration and techy cockpit.",
     image:
-      "https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=1200&auto=format&fit=crop",
+      "https://cdn.bmwblog.com/wp-content/uploads/2023/05/BMW-M3-CS-Frozen-Solid-White-4.jpg",
   },
   {
     id: "audi-r8",
@@ -72,7 +72,7 @@ const CARS = [
     description:
       "Exotic looks, everyday manners, and a spine-tingling V10.",
     image:
-      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=1200&auto=format&fit=crop",
+      "https://4kwallpapers.com/images/wallpapers/audi-r8-v10-performance-rwd-2021-5k-8k-3840x2160-7158.jpg",
   },
   {
     id: "ford-gt",
@@ -84,7 +84,7 @@ const CARS = [
     description:
       "Carbon-tub Le Mans legend for the road with wind-tunnel sculpting.",
     image:
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop",
+      "https://cdna.artstation.com/p/assets/images/images/067/721/292/large/rishi-5.jpg?1696061715",
   },
   {
     id: "toyota-supra",
@@ -96,7 +96,7 @@ const CARS = [
     description:
       "Modern icon reboot—balanced chassis, tunable, and daily-friendly.",
     image:
-      "https://images.unsplash.com/photo-1590362891991-f776e747a588?q=80&w=1200&auto=format&fit=crop",
+      "https://4kwallpapers.com/images/wallpapers/toyota-gr-supra-a90-3840x2160-22172.jpeg",
   },
   {
     id: "nissan-gtr",
@@ -108,7 +108,7 @@ const CARS = [
     description:
       "Godzilla—brutal launch control, AWD grip, and cult status.",
     image:
-      "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?q=80&w=1200&auto=format&fit=crop",
+      "https://www.digitaltrends.com/wp-content/uploads/2016/03/2017-Nissan-GTR_.jpg?p=1",
   },
 ];
 
