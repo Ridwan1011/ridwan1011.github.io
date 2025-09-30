@@ -1,84 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>My Final Project</title>
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://city-png.b-cdn.net/preview/preview_public/uploads/preview/hd-uefa-champions-league-ball-official-logo-transparent-png-701751712242318utjfinxvbq.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Favorite Cars</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <!-- Header + Navigation -->
   <header class="site-header">
-    <div class="container">
-      <div class="brand">My Final Project</div>
-      <nav class="site-nav">
-        <a href="#about">About</a>
-        <a href="#description">Description</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact" class="btn primary">Contact</a>
-      </nav>
+    <div class="container header-inner">
+      <h1>My Favorite Cars</h1>
+      <p class="tagline">A simple gallery of my top picks from iconic brands.</p>
+      <div class="controls">
+        <input id="search" class="control" type="search" placeholder="Search by brand or model…" aria-label="Search cars">
+        <select id="brandFilter" class="control" aria-label="Filter by brand">
+          <option value="All">All brands</option>
+        </select>
+        <select id="sortBy" class="control" aria-label="Sort cars">
+          <option value="year-desc">Newest first</option>
+          <option value="year-asc">Oldest first</option>
+          <option value="hp-desc">Most horsepower</option>
+          <option value="hp-asc">Least horsepower</option>
+          <option value="speed-desc">Fastest top speed</option>
+          <option value="speed-asc">Slowest top speed</option>
+        </select>
+      </div>
     </div>
   </header>
 
-  <!-- Main content -->
   <main class="container">
-
-    <!-- About Section -->
-    <section id="about">
-      <h2>About</h2>
-      <p>Description of my Project</p>
-      <a class="btn primary" href="#description">See description</a>
-    </section>
-
-    <!-- description Section -->
-    <section id="description">
-      <h2>Description</h2>
-      <div class="grid cols-3">
-        <div class="card">
-          <h3><strong>Fast</strong></h3>
-          <p><strong>quickly and efficiently.</strong></p>
-        </div>
-        <div class="card">
-          <h3><strong>Simple</strong></h3>
-          <p><strong>Easy to understand and use.</strong></p>
-        </div>
-        <div class="card">
-          <h3><strong>Responsive</strong></h3>
-          <p><strong>Looks great on desktop and mobile devices.</strong></p>
-        </div>
-      </div>
-    </section>
-
-
-    <section id="gallery">
-      <h2>Gallery</h2>
-      <div class="gallery">
-        <img src="https://1000logos.net/wp-content/uploads/2016/10/Barcelona-Logo.png" alt="Screenshot 1">
-        <img src="./images/pic2.jpg" alt="Screenshot 2">
-        <div class="thumb"></div> <!-- placeholder box -->
-      </div>
-    </section>
-
-    
-    <section id="contact">
-      <h2>Contact</h2>
-      <form>
-        <input type="text" placeholder="Your name" required />
-        <input type="email" placeholder="Your email" required />
-        <textarea rows="5" placeholder="Message"></textarea>
-        <button class="btn primary" type="submit">Send</button>
-      </form>
-    </section>
-
+    <div id="brandChips" class="chips" role="tablist" aria-label="Brand quick filters"></div>
+    <section id="grid" class="grid" aria-live="polite"></section>
   </main>
 
-
   <footer class="site-footer">
-    © 2025 My Final Project
+    <div class="container footer-inner">
+      <p>Built for my 384 final project — edit <code>app.js</code> to add your own picks.</p>
+      <p>© <span id="year"></span> My Favorite Cars</p>
+    </div>
   </footer>
+
+  <template id="cardTemplate">
+    <article class="card">
+      <div class="card-media">
+        <img class="card-img" alt="Car image" loading="lazy">
+        <button class="fav-btn" title="Toggle favorite" aria-pressed="false">☆ Favorite</button>
+      </div>
+      <div class="card-body">
+        <div class="card-top">
+          <h3 class="card-title"></h3>
+          <span class="pill year"></span>
+        </div>
+        <p class="card-desc"></p>
+        <div class="card-meta">
+          <span class="pill">🏎️ <span class="hp"></span> hp</span>
+          <span class="pill">🚀 <span class="speed"></span> mph</span>
+        </div>
+      </div>
+    </article>
+  </template>
 
   <script src="script.js"></script>
 </body>
