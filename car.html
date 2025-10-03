@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Details</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="pill" aria-label="Back to list">← Back</a>
+      <h1 id="title">Car</h1>
+      <p class="tagline" id="subtitle">Details</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="card" style="overflow: hidden;">
+      <div class="card-media">
+        <img id="hero" class="card-img" alt="Car image" loading="lazy">
+        <button id="fav" class="fav-btn" title="Toggle favorite" aria-pressed="false">☆ Favorite</button>
+      </div>
+      <div class="card-body">
+        <div class="card-top">
+          <h3 class="card-title" id="name"></h3>
+          <span class="pill year" id="year"></span>
+        </div>
+        <p class="card-desc" id="desc"></p>
+        <div class="card-meta">
+          <span class="pill">🏎️ <span id="hp"></span> hp</span>
+          <span class="pill">🚀 <span id="speed"></span> mph</span>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Built for my 384 final project</p>
+      <p>© <span id="yearFooter"></span> My Favorite Cars</p>
+    </div>
+  </footer>
+
+  <!-- Load shared data and detail logic (order matters) -->
+  <script src="cars-data.js"></script>
+  <script src="car.js"></script>
+</body>
+</html>
