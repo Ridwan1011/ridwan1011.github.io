@@ -3,16 +3,16 @@
 // ---- Editable data: put YOUR favorite cars here ----
 const CARS = [
   {
-    id: "ferrari-488",
+    id: "ferrari-laferrari",
     brand: "Ferrari",
-    model: "488 Pista",
-    year: 2019,
-    horsepower: 710,
-    topSpeedMph: 211,
+    model: "LaFerrari",
+    year: 2015,
+    horsepower: 950,
+    topSpeedMph: 217,
     description:
-      "Track-focused twin-turbo V8 with razor-sharp handling and iconic Ferrari drama.",
+      "Ferrari’s hybrid hypercar—6.3L V12 with electric assist, futuristic design, and blistering performance.",
     image:
-      "https://i.redd.it/2019-ferrari-488-pista-v0-yh4uazoznnfb1.jpg?width=2160&format=pjpg&auto=webp&s=ec1f0b5efb8198fe2dd9093d8d94034accdce499",
+      "https://www.blessthisstuff.com/imagens/listagem/2024/grande/grande_2015-ferrari-laferrari.jpeg"
   },
   {
     id: "lambo-aven",
@@ -27,28 +27,28 @@ const CARS = [
       "https://www.hdcarwallpapers.com/walls/2020_lamborghini_aventador_svj_roadster_4k_5k_4-HD.jpg",
   },
   {
-    id: "porsche-gt3",
+    id: "porsche-918",
     brand: "Porsche",
-    model: "911 GT3 (992)",
-    year: 2022,
-    horsepower: 502,
-    topSpeedMph: 198,
+    model: "918 Spyder",
+    year: 2015,
+    horsepower: 887,
+    topSpeedMph: 211,
     description:
-      "Naturally aspirated flat-six perfection with a motorsport soul and sublime steering.",
+      "Hybrid hypercar with V8 and electric motors—lightweight carbon fiber, AWD grip, and Nürburgring record-breaking speed.",
     image:
-      "https://www.pcarmarket.com/static/media/uploads/galleries/photos/uploads/galleries/14893-luis-2022-porsche-911-gt3-blue/.thumbnails/IMG_1074.jpg/IMG_1074-tiny-2048x0.jpg",
+      "https://cimg0.ibsrv.net/ibimg/hgm/1600x900-1/100/307/porsche-918-spyder-concept_100307356.jpg"
   },
   {
-    id: "mercedes-amg-gt",
-    brand: "Mercedes-AMG",
-    model: "AMG GT R",
-    year: 2019,
-    horsepower: 577,
-    topSpeedMph: 198,
+    id: "mercedes-slr",
+    brand: "Mercedes-Benz",
+    model: "SLR McLaren",
+    year: 2006,
+    horsepower: 617,
+    topSpeedMph: 207,
     description:
-      "Front-mid V8 brute with a playful tail and serious track credentials.",
+      "A collaboration between Mercedes and McLaren—supercharged V8, long nose, and F1-inspired tech.",
     image:
-      "https://www.hiltonandmoss.com/image-blobs/stock/590945/images/7b05f02c-8276-4368-b2bf-e9758b44bf82/mercedes_benz_amg_gtc_hilton_and_moss_01.jpg?width=2000&height=1333&crop",
+      "https://bringatrailer.com/wp-content/uploads/2022/10/2006_mercedes-benz_slr-mclaren_2006_mercedes-benz_slr-mclaren_1f89fca8-317c-409b-99f3-729a926bcbda-VE8oH7-23779-23784-scaled.jpg?fit=2048%2C1365"
   },
   {
     id: "bmw-m3",
@@ -75,18 +75,6 @@ const CARS = [
       "https://4kwallpapers.com/images/wallpapers/audi-r8-v10-performance-rwd-2021-5k-8k-3840x2160-7158.jpg",
   },
   {
-    id: "ford-gt",
-    brand: "Ford",
-    model: "GT",
-    year: 2018,
-    horsepower: 647,
-    topSpeedMph: 216,
-    description:
-      "Carbon-tub Le Mans legend for the road with wind-tunnel sculpting.",
-    image:
-      "https://cdna.artstation.com/p/assets/images/images/067/721/292/large/rishi-5.jpg?1696061715",
-  },
-  {
     id: "toyota-supra",
     brand: "Toyota",
     model: "GR Supra (A90)",
@@ -109,6 +97,30 @@ const CARS = [
       "Godzilla—brutal launch control, AWD grip, and cult status.",
     image:
       "https://www.digitaltrends.com/wp-content/uploads/2016/03/2017-Nissan-GTR_.jpg?p=1",
+  },
+  {
+  id: "mclaren-p1",
+  brand: "McLaren",
+  model: "P1",
+  year: 2014,
+  horsepower: 903,
+  topSpeedMph: 217,
+  description:
+    "Hybrid hypercar legend—twin-turbo V8 with electric boost, insane aero, and track-focused performance.",
+  image:
+    "https://mclaren.scene7.com/is/image/mclaren/1597-McLarenP1trade:crop-16x9?wid=1786&hei=1005"
+  },
+  {
+  id: "dodge-viper-acr",
+  brand: "Dodge",
+  model: "Viper ACR",
+  year: 2017,
+  horsepower: 645,
+  topSpeedMph: 177,
+  description:
+    "The ultimate Viper—naturally aspirated 8.4L V10, massive aero, and brutal track performance.",
+  image:
+    "https://www.mechatronik.de/fileadmin/doc/verkauf/fahrzeugvermarktung/Dodge_Viper_ACR/3.jpg"
   },
 ];
 
