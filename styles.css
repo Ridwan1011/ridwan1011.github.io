@@ -28,9 +28,58 @@ body{
   backdrop-filter: blur(8px);
   background:rgba(11,11,12,.65);
   border-bottom:1px solid var(--border);
+  text-align: center;
 }
 .header-inner{padding:22px 0}
-h1{margin:0 0 4px; font-size:clamp(24px, 3.2vw, 36px); font-weight:800; letter-spacing:-.02em}
+/* --- Header layout for car detail page --- */
+.header-inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 24px 0;
+}
+
+.back-btn {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--chip);
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  transition: background .2s ease;
+}
+
+.back-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.header-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin:0 0 4px; 
+  font-size:clamp(24px, 3.2vw, 36px); 
+  font-weight:800; 
+  letter-spacing:-.02em;
+  align-items: center;
+}
 .tagline{margin:0 0 14px; color:var(--muted)}
 
 .controls{display:flex; flex-wrap:wrap; gap:10px}

@@ -68,6 +68,12 @@
     getComputedStyle(document.documentElement).getPropertyValue('--accent') ||
     "#6366f1";
   const iconUrl = map[brand] || null;     // requires BRAND_ICONS from cars-data.js
+  console.log('Brand:', brand, 'Icon URL:', iconUrl);
+  if (brandLogo && iconUrl) {
+    brandLogo.src = iconUrl;
+    brandLogo.alt = `${brand} logo`;
+  }
+
   setFavicon(iconUrl, brand[0], (accent||"").toString().trim() || "#6366f1");
 
   // Favorite state
