@@ -15,10 +15,28 @@
     return c.toDataURL("image/png");
   }
   function setFavicon(urlOrNull, letterFallback="M", color="#6366f1"){
-    let link = document.querySelector('link#favicon[rel="icon"]');
-    if(!link){ link = document.createElement("link"); link.id="favicon"; link.rel="icon"; link.type="image/png"; document.head.appendChild(link); }
-    link.href = urlOrNull || makeDataFavicon(letterFallback, color);
+  let link = document.querySelector('link#favicon[rel="icon"]');
+  if(!link){
+    link = document.createElement("link");
+    link.id = "favicon";
+    link.rel = "icon";
+    document.head.appendChild(link);
   }
+  // Detect type from extension (supports .png, .svg, .ico)
+  if (urlOrNull && /\.svg(\?|$)/i.test(urlOrNull)) {
+    link.type = "image/svg+xml";
+  } else if (urlOrNull && /\.ico(\?|$)/i.test(urlOrNull)) {
+    link.type = "image/x-icon";
+  } else {
+    link.type = "image/png";
+  }
+  // Cache-bust so the tab icon updates immediately
+  const href = urlOrNull
+    ? `${urlOrNull}${urlOrNull.includes('?') ? '&' : '?'}v=${Date.now()}`
+    : makeDataFavicon(letterFallback, color);
+  link.href = href;
+}
+
 
   const cars = window.CARS || [];
   const car = cars.find(c => c.id === id);

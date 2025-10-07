@@ -367,7 +367,7 @@ window.CARS = [
 // Optional: brand → icon path (put your 32×32 PNG/SVG files in /icons/)
 window.BRAND_ICONS = {
   "Ferrari":        "icons/ferrari.png",
-  "Lamborghini":    "icons/lamborghini.jpg",
+  "Lamborghini":    "icons/lamborghini.png",
   "McLaren":        "icons/mclaren.png",
   "Porsche":        "icons/porsche.png",
   "Mercedes-Benz":  "icons/mercedes.png",
