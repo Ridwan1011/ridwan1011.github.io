@@ -11,7 +11,7 @@ window.CARS = [
     description:
       "Ferrari’s hybrid hypercar—6.3L V12 with electric assist, futuristic design, and blistering performance.",
     image:
-      "https://www.blessthisstuff.com/imagens/listagem/2024/grande/grande_2015-ferrari-laferrari.jpeg",
+      "https://res.cloudinary.com/kidston/image/upload/c_fill/2022/11/2018%20Ferrari%20LaFerrari%20Aperta/1.jpg",
     details: {
       accent: "#dc2626",
       long:
