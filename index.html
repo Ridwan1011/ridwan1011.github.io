@@ -12,25 +12,52 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="container header-inner">
+  <div class="container header-inner">
+    <div class="header-top">
       <h1>My Favorite Cars</h1>
-      <p class="tagline">A simple gallery of my top picks from iconic brands.</p>
-      <div class="controls">
-        <input id="search" class="control" type="search" placeholder="Search by brand or model…" aria-label="Search cars">
-        <select id="brandFilter" class="control" aria-label="Filter by brand">
-          <option value="All">All brands</option>
-        </select>
-        <select id="sortBy" class="control" aria-label="Sort cars">
-          <option value="year-desc">Newest first</option>
-          <option value="year-asc">Oldest first</option>
-          <option value="hp-desc">Most horsepower</option>
-          <option value="hp-asc">Least horsepower</option>
-          <option value="speed-desc">Fastest top speed</option>
-          <option value="speed-asc">Slowest top speed</option>
-        </select>
+
+      <div class="header-actions">
+        <!-- Fake sign-in: stored in localStorage for now -->
+        <button id="signInButton" class="btn-ghost" type="button">
+          Sign in
+        </button>
+
+        <!-- Only enabled when “signed in” -->
+        <a href="add-car.html"
+           id="addCarLink"
+           class="btn-primary"
+           aria-disabled="true">
+          + Add a car
+        </a>
       </div>
     </div>
-  </header>
+
+    <p class="tagline">A simple gallery of my top picks from iconic brands.</p>
+
+    <div class="controls">
+      <input id="search" class="control" type="search"
+             placeholder="Search by brand or model…"
+             aria-label="Search cars">
+      <select id="brandFilter" class="control" aria-label="Filter by brand">
+        <option value="All">All brands</option>
+      </select>
+      <select id="sortBy" class="control" aria-label="Sort cars">
+        <option value="year-desc">Newest first</option>
+        <option value="year-asc">Oldest first</option>
+        <option value="hp-desc">Most horsepower</option>
+        <option value="hp-asc">Least horsepower</option>
+        <option value="speed-desc">Fastest top speed</option>
+        <option value="speed-asc">Slowest top speed</option>
+      </select>
+    </div>
+
+    <!-- Small “status” line so you can show demo of login later -->
+    <p id="authStatus" class="auth-status">
+      You are not signed in.
+    </p>
+  </div>
+</header>
+
 
   <main class="container">
     <div id="brandChips" class="chips" role="tablist" aria-label="Brand quick filters"></div>
@@ -43,6 +70,55 @@
       <p>© <span id="year"></span> My Favorite Cars</p>
     </div>
   </footer>
+  <!-- Auth modal (front-end only, used as a placeholder for real auth) -->
+  <div id="authModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <div class="modal-header">
+        <h2 id="authTitle">Sign in</h2>
+        <button type="button" id="authClose" class="modal-close" aria-label="Close">
+          ✕
+        </button>
+      </div>
+
+      <form id="authForm" class="modal-body">
+  <div class="field-group">
+    <label for="authEmail">Email</label>
+    <input type="email" id="authEmail" required>
+  </div>
+
+  <div class="field-group">
+    <label for="authPassword">Password</label>
+    <input type="password" id="authPassword" required minlength="4">
+  </div>
+
+  <div class="field-group" id="authNameGroup">
+    <label for="authName">Display name</label>
+    <input type="text" id="authName">
+  </div>
+
+  <!-- keep or remove this hint, up to you -->
+  <p class="field-hint" id="authHint">
+    
+  </p>
+
+  <div class="modal-actions">
+    <button type="submit" id="authSubmitButton" class="btn-primary">Sign in</button>
+    <button type="button" id="authCancel" class="btn-ghost">Cancel</button>
+  </div>
+
+  <p class="auth-switch">
+    <span id="authSwitchText">Don’t have an account?</span>
+    <button type="button" id="authSwitchButton" class="link-button">
+      Sign up
+    </button>
+  </p>
+</form>
+
+
+    </div>
+  </div>
 
   <template id="cardTemplate">
     <article class="card">
@@ -59,6 +135,7 @@
         <div class="card-meta">
           <span class="pill">🏎️ <span class="hp"></span> hp</span>
           <span class="pill">🚀 <span class="speed"></span> mph</span>
+          <span class="pill added-by"></span>
         </div>
       </div>
     </article>

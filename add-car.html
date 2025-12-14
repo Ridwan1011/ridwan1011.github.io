@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add a Car</title>
+  <link id="favicon" rel="icon" type="image/png" href="">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="back-btn" aria-label="Back to list">← Back</a>
+      <div class="header-center">
+  <!-- Brand logo preview (optional) -->
+<img id="brandLogoPreview"
+     class="header-logo"
+     alt="Brand logo preview"
+     style="display: none;" />
+
+  <h1>Add a new car</h1>
+  <p class="tagline">Fill this form to add a car to the collection.</p>
+</div>
+
+    </div>
+  </header>
+
+  <main class="container">
+    <form id="addCarForm" class="add-car-form" enctype="multipart/form-data">
+      <article class="card" style="overflow: hidden;">
+        <div class="card-media">
+          <img id="previewImage"
+            class="card-img"
+            alt="Car preview"
+            loading="lazy"
+            style="display: none;">
+        </div>
+        <div class="card-body">
+          <div class="card-top add-car-top">
+            <div class="field-group">
+              <label for="brandInput">Brand</label>
+              <input id="brandInput" name="brand" type="text" required>
+            </div>
+            <div class="field-group">
+              <label for="modelInput">Model</label>
+              <input id="modelInput" name="model" type="text" required>
+            </div>
+            <div class="field-group">
+              <label for="yearInput">Year</label>
+              <input id="yearInput" name="year" type="number" required min="1900" max="2100">
+            </div>
+          </div>
+            
+          <div class="add-car-row">
+            <div class="field-group">
+              <label for="hpInput">Horsepower</label>
+              <input id="hpInput" name="horsepower" type="number" required min="0">
+            </div>
+            <div class="field-group">
+              <label for="speedInput">Top speed (mph)</label>
+              <input id="speedInput" name="topSpeedMph" type="number" required min="0">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="shortDescInput">Short description</label>
+            <textarea id="shortDescInput" name="description" rows="2" required></textarea>
+          </div>
+
+          <div class="field-group">
+            <label for="imageFileInput">Main image</label>
+            <input id="imageFileInput" name="imageFile" type="file" accept="image/*">
+            <div class="field-group">
+              <label for="brandLogoFileInput">Brand logo image</label>
+              <input id="brandLogoFileInput" name="brandLogoFile" type="file" accept="image/*">
+              <p class="field-hint">
+              </p>
+            </div>
+
+            <p class="field-hint">
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <section class="section">
+        <h2>More details (optional)</h2>
+
+        <div class="field-group">
+          <label for="longDescInput">Overview</label>
+          <textarea id="longDescInput" name="long" rows="4"
+            ></textarea>
+        </div>
+
+        <div class="field-group">
+          <label for="fastFactsInput">Fast facts (one per line)</label>
+          <textarea id="fastFactsInput" name="facts" rows="3"
+            ></textarea>
+        </div>
+
+        <div class="field-group">
+          <label for="videoUrlInput">YouTube video URL</label>
+          <input id="videoUrlInput" name="video" type="url">
+        </div>
+
+        <button type="submit" class="btn-primary">
+          Save car
+        </button>
+        <p class="field-hint">
+          
+        </p>
+      </section>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Built for my 384 final project</p>
+      <p>© <span id="yearFooter"></span> My Favorite Cars</p>
+    </div>
+  </footer>
+
+  <script src="add-car.js"></script>
+</body>
+</html>
